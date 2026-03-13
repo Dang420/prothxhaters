@@ -1,9 +1,3 @@
-<head>
-  <meta property="og:title" content="⚠️ OFFICIAL HATER REGISTRY ⚠️">
-  <meta property="og:description" content="Log your grievance and fund my Petty Cash. $1.00 per complaint.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://your-screenshot-link.com/preview.jpg">
-</head>
 let count = 0;
 
 function logHater() {
@@ -14,19 +8,19 @@ function logHater() {
 
   if (nameInput.value.trim() !== "") {
     const li = document.createElement('li');
-    const reason = reasonInput.value.trim() || "ERROR: NO_BRAIN_CELLS_DETECTED";
+    const reason = reasonInput.value.trim() || "ERROR: NO_VALID_REASON_FOUND";
     
     li.innerHTML = `
-      <span style="color:var(--neon-green);">[LOGGED_ID]:</span> ${nameInput.value}<br>
-      <span style="color:var(--neon-pink);"> >> STATUS: ${reason}</span>
+      <span style="color:var(--neon-green);">[LOGGED]:</span> ${nameInput.value}<br>
+      <span style="color:var(--neon-pink);"> >> WHY: ${reason}</span>
     `;
     list.prepend(li);
 
-    // Increment Counter
+    // Update the Petty Cash
     count += 1.00;
     cash.textContent = `$${count.toFixed(2)}`;
 
-    // Reset and Flash
+    // Reset for next hater
     nameInput.value = "";
     reasonInput.value = "";
     nameInput.focus();
@@ -35,6 +29,6 @@ function logHater() {
 
 function shareFB() {
   const url = window.location.href;
-  const text = "Receipts logged. Profit secured. Sign the board and fund my future: ";
+  const text = "Receipts logged. Petty Cash fund growing. Sign the board here: ";
   window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`, '_blank');
 }
