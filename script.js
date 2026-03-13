@@ -1,3 +1,9 @@
+<head>
+  <meta property="og:title" content="⚠️ OFFICIAL HATER REGISTRY ⚠️">
+  <meta property="og:description" content="Log your grievance and fund my Petty Cash. $1.00 per complaint.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://your-screenshot-link.com/preview.jpg">
+</head>
 let count = 0;
 
 function logHater() {
